@@ -6,6 +6,18 @@ import { MyApp } from './app.component';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+/** Storage */
+import { IonicStorageModule } from '@ionic/storage';
+
+/** Network Infomation */
+import { Network } from '@ionic-native/network';
+
+/** Device */
+import { Device } from '@ionic-native/device';
+
+// Push Notification 
+import { FCM } from '@ionic-native/fcm';
+
 /** Import http module */
 import { HttpModule } from '@angular/http';
 import { WebapiServiceProvider } from '../providers/webapi-service/webapi-service';
@@ -45,7 +57,8 @@ import { RegisterPage } from '../pages/register/register';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpModule
+    HttpModule,
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -67,7 +80,10 @@ import { RegisterPage } from '../pages/register/register';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    WebapiServiceProvider
+    WebapiServiceProvider,
+    Network,
+    Device,
+    FCM
   ]
 })
 export class AppModule {}

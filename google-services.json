@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "602347185837",
+    "firebase_url": "https://combindapp-samit.firebaseio.com",
+    "project_id": "combindapp-samit",
+    "storage_bucket": "combindapp-samit.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:602347185837:android:efce6233a55bb352",
+        "android_client_info": {
+          "package_name": "com.itgenius.smcombindapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "602347185837-gr7n7u32hvith7kce59pv0sum0ev9rtf.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "602347185837-gr7n7u32hvith7kce59pv0sum0ev9rtf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQrGVOOyBBuseeT2FqAhBKa3siI_skZ0c"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

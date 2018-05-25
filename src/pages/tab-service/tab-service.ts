@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the TabServicePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+// import สำหรับการสร้างตัวแปรแบบ storage
+import { Storage } from '@ionic/storage';
 
 @IonicPage()
 @Component({
@@ -15,7 +11,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class TabServicePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  email:any;
+
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    public storage: Storage) {
+
+       // การเรียกตัวแปร storage มาใช้งาน
+       this.storage.get('myemail').then((result) =>{
+        this.email = result;
+      });
+      
   }
 
   ionViewDidLoad() {
