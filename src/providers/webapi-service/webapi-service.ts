@@ -8,7 +8,7 @@ export class WebapiServiceProvider {
   baseUrl: any;
 
   constructor(public http: Http) {
-    this.baseUrl = "http://localhost/ionic_api/";
+    this.baseUrl = "http://192.168.1.45/ionic_api/";
   }
 
   // POST Method 
