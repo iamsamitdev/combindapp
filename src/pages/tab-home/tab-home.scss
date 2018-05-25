@@ -1,0 +1,64 @@
+page-tab-home {
+    .b_top{
+        height: 150px;
+        background: url('../assets/imgs/homepage-flights.jpg');
+        background-size: cover;
+    }
+
+    .b_top_content{
+        padding-top: 30px;
+        padding-left: 20px;
+        overflow: hidden;
+    }
+
+    .b_top_content img{
+        width: 80px;
+        border-radius: 50%;
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 20px;
+        border:2px solid #fff;
+    }
+
+    .box-c-right{
+        display: inline-block;
+    }
+
+    .b_top_content h2
+    {
+        color:#fff;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .b_top_content p
+    {
+        color:#fff;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .list-menu{
+        background-color: brown;
+        margin:2px;
+        height: 120px;
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    .list-menu img
+    {
+        width: 50px;
+    }
+
+    .list-menu h3
+    {
+        margin-top: 10px;
+        font-size: 14px;
+        color: white;
+    }
+
+    ion-row .list-menu:nth-child(even){
+        background-color: darkgreen;
+    }
+}
