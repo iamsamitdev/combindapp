@@ -12,7 +12,6 @@ export class CoursedetailPage {
 
   getcid: number; // รับค่าตัวแปร cid
   cdetail: any; // เก็บข้อมูลที่ได้จาก json
-  responseNotfound: any;
 
   constructor(
     public navCtrl: NavController,
@@ -31,12 +30,14 @@ export class CoursedetailPage {
         console.log(result);
         this.cdetail = result;
       }, (error) => {
-        this.responseNotfound = "มีบางอย่างผิดพลาดในการดึงข้อมูลจาก Server";
-        this.alertCtrl.create({
-          title: 'มีข้อผิดพลาด',
-          subTitle: 'มีบางอย่างผิดพลาดในการดึงข้อมูลจาก Server',
-          buttons: ['Dismiss']
-        }).present();
+
+        if (error.status == 0) {
+          this.alertCtrl.create({
+            title: 'มีข้อผิดพลาด',
+            subTitle: 'มีบางอย่างผิดพลาดในการดึงข้อมูลจาก Server',
+            buttons: ['Dismiss']
+          }).present();
+        }
 
       });
     } else {

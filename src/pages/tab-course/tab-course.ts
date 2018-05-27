@@ -87,11 +87,13 @@ export class TabCoursePage {
           console.log(result);
           this.responseData = result;
         }, (error) => {
-          this.alertCtrl.create({
-            title: 'มีข้อผิดพลาด',
-            subTitle: 'มีบางอย่างผิดพลาดในการดึงข้อมูลจาก Server',
-            buttons: ['Dismiss']
-          }).present();
+          if (error.status == 0) {
+            this.alertCtrl.create({
+              title: 'มีข้อผิดพลาด',
+              subTitle: 'มีบางอย่างผิดพลาดในการดึงข้อมูลจาก Server',
+              buttons: ['Dismiss']
+            }).present();
+          }
         });
 
       } else {
