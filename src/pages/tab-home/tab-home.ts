@@ -45,6 +45,7 @@ export class TabHomePage {
   }
 
   ionViewDidLoad() {
+    /*
     this.alertCtrl.create({
       title: 'ข้อมูลเครื่อง',
       subTitle: 'uuid: '+this.uuid+'<br>'+
@@ -54,6 +55,7 @@ export class TabHomePage {
                      'serial: '+this.serial,
       buttons: ['Dismiss']
     }).present();
+    */
   }
 
   register()

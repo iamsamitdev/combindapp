@@ -1,22 +1,18 @@
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>รายละเอียดคอร์ส</ion-title>
-  </ion-navbar>
-
+  <ion-navbar transparent></ion-navbar>
 </ion-header>
 
-
 <ion-content>
-  <ion-card *ngFor="let cd of cdetail">
-    <img src="http://192.168.1.45/ionic_api/images/{{cd.images}}" />
-    <ion-card-content>
+  <div *ngFor="let cd of cdetail">
+    <img src="http://192.168.1.59/ionic_api/images/{{cd.images}}" width="100%">
+
+    <div padding>
       <ion-card-title>
         {{cd.name}}
       </ion-card-title>
-      <p>
-        {{cd.description}}
-      </p>
+      <div [innerHtml]="cd.description">
+        
+      </div>
 
       <ion-grid>
         <ion-row>
@@ -28,7 +24,8 @@
           </ion-col>
         </ion-row>
       </ion-grid>
+    </div>
+    
 
-    </ion-card-content>
-  </ion-card>
+  </div>
 </ion-content>
